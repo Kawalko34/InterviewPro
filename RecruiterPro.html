@@ -849,6 +849,17 @@ body.dark .backup-info-text{color:#93C5FD;}
 .login-input:-webkit-autofill,.login-input:-webkit-autofill:hover,.login-input:-webkit-autofill:focus,.login-input:-webkit-autofill:active{-webkit-box-shadow:0 0 0 1000px #fff inset!important;-webkit-text-fill-color:#1a1008!important;caret-color:#1a1008;}
 input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{-webkit-box-shadow:0 0 0 1000px #fff inset!important;-webkit-text-fill-color:#1a1008!important;}
 .login-input option{background:#fff;color:#1a1008;}
+/* Override dark-mode global rules for login/register/setup forms */
+#loginOverlay .login-input,
+body.dark #loginOverlay .login-input,
+body.dark #loginOverlay input[type=text],
+body.dark #loginOverlay input[type=email],
+body.dark #loginOverlay input[type=password],
+body.dark #loginOverlay select{background:#fff!important;color:#1a1008!important;border-color:#d0ccc8!important;}
+#loginOverlay .login-input:focus,
+body.dark #loginOverlay .login-input:focus,
+body.dark #loginOverlay input:focus{background:#fff!important;color:#1a1008!important;border-color:#C8581A!important;box-shadow:0 0 0 3px rgba(200,88,26,.18)!important;}
+#loginOverlay .login-input::placeholder{color:#aaa!important;}
 .login-btn{width:100%;padding:12px;background:linear-gradient(135deg,#A04214,#C8581A);color:#fff;border:none;border-radius:9px;font-size:.9rem;font-weight:700;cursor:pointer;letter-spacing:.5px;margin-top:6px;transition:filter .2s;}
 .login-btn:hover{filter:brightness(1.12);}
 .login-btn:active{filter:brightness(.95);}
