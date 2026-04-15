@@ -846,7 +846,8 @@ body.dark .backup-info-text{color:#93C5FD;}
 .login-input{width:100%;padding:10px 12px;background:#1A1108;border:1.5px solid rgba(255,255,255,.12);border-radius:8px;color:#fff;font-size:.86rem;font-family:inherit;outline:none;transition:border-color .2s,background .2s;box-sizing:border-box;}
 .login-input:focus{border-color:rgba(200,88,26,.6);background:#1E1510;}
 .login-input::placeholder{color:rgba(255,255,255,.22);}
-.login-input:-webkit-autofill,.login-input:-webkit-autofill:hover,.login-input:-webkit-autofill:focus,.login-input:-webkit-autofill:active{-webkit-box-shadow:0 0 0 1000px #1A1108 inset!important;-webkit-text-fill-color:#fff!important;caret-color:#fff;border-color:rgba(200,88,26,.4)!important;}
+.login-input:-webkit-autofill,.login-input:-webkit-autofill:hover,.login-input:-webkit-autofill:focus,.login-input:-webkit-autofill:active{-webkit-box-shadow:0 0 0 1000px #1A1108 inset!important;-webkit-text-fill-color:#fff!important;caret-color:#fff;border-color:rgba(200,88,26,.4)!important;transition:background-color 9999s ease-in-out 0s!important;}
+input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{-webkit-box-shadow:0 0 0 1000px #1A1108 inset!important;-webkit-text-fill-color:#fff!important;caret-color:#fff!important;}
 .login-input option{background:#1A1108;color:#fff;}
 .login-btn{width:100%;padding:12px;background:linear-gradient(135deg,#A04214,#C8581A);color:#fff;border:none;border-radius:9px;font-size:.9rem;font-weight:700;cursor:pointer;letter-spacing:.5px;margin-top:6px;transition:filter .2s;}
 .login-btn:hover{filter:brightness(1.12);}
@@ -1065,7 +1066,7 @@ body.dark .next-btn-text strong{color:#E8E2DA;}
 
     <div class="login-field">
       <label class="login-label">Company Name <span style="color:rgba(255,255,255,.2);font-weight:400;">(optional — shown on all pages)</span></label>
-      <input class="login-input" type="text" id="regCompany" placeholder="e.g. Sunrise Hotels Ltd" autocomplete="organization">
+      <input class="login-input" type="text" id="regCompany" placeholder="e.g. Sunrise Hotels Ltd" autocomplete="off">
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:0;">
@@ -1105,7 +1106,7 @@ body.dark .next-btn-text strong{color:#E8E2DA;}
 
     <div class="login-field" style="margin-top:10px;">
       <label class="login-label">Password Hint <span style="color:rgba(255,255,255,.2);font-weight:400;">(optional)</span></label>
-      <input class="login-input" type="text" id="regHint" placeholder='e.g. "My cat name + birth year"' onkeydown="if(event.key==='Enter')doRegister()">
+      <input class="login-input" type="text" id="regHint" placeholder='e.g. "My cat name + birth year"' autocomplete="off" onkeydown="if(event.key==='Enter')doRegister()">
     </div>
 
     <!-- Admin key guard — prevents random people creating admin accounts -->
@@ -1134,7 +1135,7 @@ body.dark .next-btn-text strong{color:#E8E2DA;}
     <div class="setup-badge">👋 Welcome! Let's get you set up. Fill in the details below to create your admin account — it only takes a minute.</div>
     <div class="login-field">
       <label class="login-label">Company Name</label>
-      <input class="login-input" type="text" id="setupCompany" placeholder="e.g. Sunrise Hotels Ltd" onkeydown="if(event.key==='Enter')document.getElementById('setupName').focus()">
+      <input class="login-input" type="text" id="setupCompany" placeholder="e.g. Sunrise Hotels Ltd" autocomplete="off" onkeydown="if(event.key==='Enter')document.getElementById('setupName').focus()">
     </div>
     <div class="login-field">
       <label class="login-label">Your Name</label>
@@ -1154,7 +1155,7 @@ body.dark .next-btn-text strong{color:#E8E2DA;}
     </div>
     <div class="login-field">
       <label class="login-label">Password Hint <span style="color:rgba(255,255,255,.2);font-weight:400;">(optional — shown on "Forgot password")</span></label>
-      <input class="login-input" type="text" id="setupHint" placeholder='e.g. "My dog\'s name + year of birth"' onkeydown="if(event.key==='Enter')doSetup()">
+      <input class="login-input" type="text" id="setupHint" placeholder='e.g. "My dog\'s name + year of birth"' autocomplete="off" onkeydown="if(event.key==='Enter')doSetup()">
     </div>
     <button class="login-btn" onclick="doSetup()">Create Account &amp; Start →</button>
     <div class="login-err" id="setupError"></div>
