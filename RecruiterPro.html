@@ -1424,7 +1424,7 @@ body.dark .next-btn-text strong{color:#E8E2DA;}
   <div class="card">
     <div class="card-hd">
       <div class="card-icon">📋</div>
-      <div><div class="card-title">Interview Setup</div><div class="card-subtitle">Interviewer, date, venue and role being recruited for</div></div>
+      <div><div class="card-title">Interview Setup</div><div class="card-subtitle">Interviewer, date and venue</div></div>
     </div>
     <div class="card-body">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;background:rgba(200,88,26,.06);border:1px solid rgba(200,88,26,.18);border-radius:8px;padding:8px 14px;margin-bottom:12px;">
@@ -1440,7 +1440,16 @@ body.dark .next-btn-text strong{color:#E8E2DA;}
       <div class="divider"></div>
       <!-- site field hidden but kept for data compatibility -->
       <div id="restWrap" style="display:none;"><div id="restBar"></div><div id="restPanel"><div class="slide-inner"><div class="rest-grid" id="restGrid"></div><input id="restNewInput"><span class="sel-dot" id="restDot"></span><span id="restLabel"></span></div></div></div>
-      <div class="field mt"><label class="fl">Position Applied For <span class="req">*</span></label>
+    </div>
+  </div>
+
+  <!-- CANDIDATE QUESTIONS -->
+  <div class="section-sep"><span class="section-sep-text">Section 1 — Candidate Questions</span></div>
+  <div class="card">
+    <div class="card-hd"><div class="card-icon">👤</div><div><div class="card-title">Candidate Information</div><div class="card-subtitle">Position applied for and key details about the candidate</div></div></div>
+    <div class="card-body">
+      <div class="field" style="margin-bottom:14px;">
+        <label class="fl" style="font-size:.7rem;font-weight:800;color:var(--brand);letter-spacing:.5px;">🎯 POSITION APPLIED FOR <span class="req">*</span></label>
         <div class="slide-wrap" id="posWrap">
           <div class="slide-bar" id="posBar" onclick="toggleSlider('pos')">
             <span class="slide-bar-text ph" id="posLabel"><span class="sel-dot" id="posDot"></span>Select position</span>
@@ -1450,14 +1459,7 @@ body.dark .next-btn-text strong{color:#E8E2DA;}
         </div>
         <input type="hidden" id="position">
       </div>
-    </div>
-  </div>
-
-  <!-- CANDIDATE QUESTIONS -->
-  <div class="section-sep"><span class="section-sep-text">Section 1 — Candidate Questions</span></div>
-  <div class="card">
-    <div class="card-hd"><div class="card-icon">👤</div><div><div class="card-title">Candidate Information</div><div class="card-subtitle">Key questions to ask and record during the interview</div></div></div>
-    <div class="card-body">
+      <div class="divider"></div>
       <div class="g2">
         <div class="field"><label class="fl">Candidate First Name <span class="req">*</span></label><input type="text" id="candName" placeholder="First name"></div>
         <div class="field"><label class="fl">Candidate Last Name <span class="req">*</span></label><input type="text" id="candSurname" placeholder="Last name"></div>
