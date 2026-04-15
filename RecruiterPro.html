@@ -6016,7 +6016,10 @@ async function doSetup(){
   document.getElementById('loginOverlay').classList.add('hidden');
   updateHeaderUser(admin);
   updateCompanyName();
-  showTodayView();
+  // First-time setup → show industry selection so user picks their business type immediately
+  renderLandingPage();
+  const lp=document.getElementById('landingPage');
+  if(lp){lp.classList.remove('hidden');lp.classList.remove('exit');}
 }
 
 function showForgotView(){
