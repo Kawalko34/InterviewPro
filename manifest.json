@@ -13,6 +13,9 @@
   "lang": "en",
   "dir": "ltr",
   "categories": ["business", "productivity"],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
   "icons": [
     { "src": "icons/icon-44.png",  "sizes": "44x44",   "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-71.png",  "sizes": "71x71",   "type": "image/png", "purpose": "any" },
@@ -21,6 +24,22 @@
     { "src": "icons/icon-310.png", "sizes": "310x310", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
     { "src": "icon.svg",           "sizes": "any",     "type": "image/svg+xml" }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/screen1.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Dashboard — interview schedule, stats and quick actions"
+    },
+    {
+      "src": "screenshots/screen2.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Professional interview platform with industry templates"
+    }
   ],
   "shortcuts": [
     {
