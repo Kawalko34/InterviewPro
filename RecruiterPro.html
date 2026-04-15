@@ -4686,12 +4686,12 @@ function openReport(){
         <div style="font-size:.56rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#7A6553;margin-bottom:8px;">Interview Details</div>
         <div style="font-size:.82rem;"><strong>Date:</strong> ${dateStr} ${d.intTime?' at '+d.intTime:''}</div>
         <div style="font-size:.82rem;"><strong>Site:</strong> ${d.site||'—'}</div>
-        <div style="font-size:.82rem;"><strong>Position:</strong> ${d.position||'—'}</div>
         <div style="font-size:.82rem;"><strong>Interviewer:</strong> ${interviewer}</div>
       </div>
       <div style="padding:14px 18px;background:#F6F1EB;border-radius:10px;border:1px solid #DDD0C0;">
         <div style="font-size:.56rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#7A6553;margin-bottom:8px;">Candidate Profile</div>
-        <div style="font-size:1.05rem;font-weight:800;color:#1E140A;margin-bottom:4px;">${candidate}</div>
+        <div style="font-size:1.05rem;font-weight:800;color:#1E140A;margin-bottom:2px;">${candidate}</div>
+        ${d.position?`<div style="font-size:.82rem;margin-bottom:4px;">🎯 <strong>Position Applied For:</strong> ${escH(d.position)}</div>`:''}
         ${d.candPhone?`<div style="font-size:.82rem;">📞 <strong>Phone:</strong> ${escH(d.candPhone)}</div>`:''}
         ${d.candEmail?`<div style="font-size:.82rem;">📧 <strong>Email:</strong> ${escH(d.candEmail)}</div>`:''}
         ${d.candAddress?`<div style="font-size:.82rem;">🏠 <strong>Address:</strong> ${escH(d.candAddress)}</div>`:''}
