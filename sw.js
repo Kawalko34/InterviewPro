@@ -1,5 +1,5 @@
-// InterviewPro Service Worker v3 — Full Offline Support
-const CACHE = 'interviewpro-v3';
+// InterviewPro Service Worker v4 — Full Offline Support
+const CACHE = 'interviewpro-v4';
 const ASSETS = [
   './RecruiterPro.html',
   './manifest.json',
@@ -40,4 +40,22 @@ self.addEventListener('fetch', e => {
       }).catch(() => caches.match('./RecruiterPro.html'));
     })
   );
+});
+
+// Background sync support
+self.addEventListener('sync', e => {
+  if (e.tag === 'sync-interviews') {
+    console.log('[SW] Background sync: sync-interviews');
+  }
+});
+
+// Push notifications support
+self.addEventListener('push', e => {
+  if (e.data) {
+    self.registration.showNotification('InterviewPro', {
+      body: e.data.text(),
+      icon: './icons/icon-192.png',
+      badge: './icons/icon-44.png'
+    });
+  }
 });
