@@ -943,42 +943,42 @@ body.dark .next-btn-text strong{color:#E8E2DA;}
       <button class="btn-close" onclick="closeBackupLocationPicker()">✕</button>
     </div>
     <div class="modal-body" style="padding:24px;">
-      <p style="font-size:.82rem;color:#374151;margin-bottom:18px;line-height:1.6;">Wybierz gdzie mamy zapisywać automatyczne kopie zapasowe. Wystarczy że klikniesz lokalizację — otworzy się okno Windows już w odpowiednim miejscu, a Ty tylko zatwierdzisz.</p>
+      <p style="font-size:.82rem;color:#374151;margin-bottom:18px;line-height:1.6;">Choose where to save automatic backups. Simply click a location — Windows will open the folder picker and you just confirm.</p>
       <div style="display:flex;flex-direction:column;gap:10px;">
         <button class="backup-loc-card" onclick="setupAutoBackupInLocation('documents')">
           <span class="backup-loc-icon">☁️</span>
           <div>
-            <div class="backup-loc-name">OneDrive / Dokumenty</div>
-            <div class="backup-loc-desc">Zalecane — automatyczna synchronizacja z chmurą</div>
+            <div class="backup-loc-name">OneDrive / Documents</div>
+            <div class="backup-loc-desc">Recommended — automatic cloud sync</div>
           </div>
           <span class="backup-loc-arrow">→</span>
         </button>
         <button class="backup-loc-card" onclick="setupAutoBackupInLocation('desktop')">
           <span class="backup-loc-icon">🖥️</span>
           <div>
-            <div class="backup-loc-name">Pulpit</div>
-            <div class="backup-loc-desc">Łatwy dostęp — widoczne od razu na pulpicie</div>
+            <div class="backup-loc-name">Desktop</div>
+            <div class="backup-loc-desc">Easy access — visible right on your desktop</div>
           </div>
           <span class="backup-loc-arrow">→</span>
         </button>
         <button class="backup-loc-card" onclick="setupAutoBackupInLocation('downloads')">
           <span class="backup-loc-icon">📥</span>
           <div>
-            <div class="backup-loc-name">Pobrane</div>
-            <div class="backup-loc-desc">Folder Pobrane na tym komputerze</div>
+            <div class="backup-loc-name">Downloads</div>
+            <div class="backup-loc-desc">Downloads folder on this computer</div>
           </div>
           <span class="backup-loc-arrow">→</span>
         </button>
         <button class="backup-loc-card secondary" onclick="setupAutoBackupInLocation(null)">
           <span class="backup-loc-icon">📁</span>
           <div>
-            <div class="backup-loc-name">Wybierz inny folder...</div>
-            <div class="backup-loc-desc">Otwórz przeglądarkę folderów i wskaż własną lokalizację</div>
+            <div class="backup-loc-name">Choose another folder...</div>
+            <div class="backup-loc-desc">Browse folders and pick your own location</div>
           </div>
           <span class="backup-loc-arrow">→</span>
         </button>
       </div>
-      <p style="font-size:.68rem;color:#9CA3AF;margin-top:16px;text-align:center;">Po wybraniu lokalizacji pojawi się systemowe okno Windows — wystarczy kliknąć <strong>„Wybierz folder"</strong></p>
+      <p style="font-size:.68rem;color:#9CA3AF;margin-top:16px;text-align:center;">After selecting a location, a Windows folder picker will appear — just click <strong>"Select Folder"</strong></p>
     </div>
   </div>
 </div>
@@ -5272,7 +5272,7 @@ async function toggleAutoBackup(){
 
 function setupAutoBackupFolder(){
   if(!('showDirectoryPicker' in window)){
-    alert('Twoja przeglądarka nie obsługuje wyboru folderu.\nUżyj Microsoft Edge lub Google Chrome.');
+    alert('Your browser does not support folder selection.\nPlease use Microsoft Edge or Google Chrome.');
     return;
   }
   openBackupLocationPicker();
@@ -5298,9 +5298,9 @@ async function setupAutoBackupInLocation(startIn){
     await performAutoBackup(true);
     renderAutoBackupUI();
     renderTvAutoBackupBtn();
-    setStatus('✅ Auto-backup włączony — folder: '+handle.name);
+    setStatus('✅ Auto-backup enabled — folder: '+handle.name);
   } catch(e){
-    if(e.name!=='AbortError') alert('Nie udało się uzyskać dostępu do folderu: '+e.message);
+    if(e.name!=='AbortError') alert('Could not access the selected folder: '+e.message);
   }
 }
 
