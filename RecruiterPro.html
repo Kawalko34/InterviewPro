@@ -3968,7 +3968,7 @@ In the meantime, if you have any questions at all, just drop me a message. So ex
     <div style="font-size:.6rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--brand);margin-bottom:10px;">💬 Generated Message</div>
     <div class="field"><label class="fl">Message</label><textarea class="email-textarea" id="emailBodyText" style="min-height:100px;">${escH(msg)}</textarea></div>
     <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;">
-      <button class="btn btn-ghost" style="background:#25D366;border:none;color:#fff;" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.getElementById('emailBodyText').value))">💬 WhatsApp</button>
+      <button class="btn btn-ghost" style="background:#25D366;border:none;color:#fff;" onclick="if(confirm('Open WhatsApp to send this message?'))window.open('https://wa.me/?text='+encodeURIComponent(document.getElementById('emailBodyText').value))">💬 WhatsApp</button>
       <button class="btn btn-ghost" style="background:var(--brand);border:none;color:#fff;" onclick="window.open('sms:?body='+encodeURIComponent(document.getElementById('emailBodyText').value))">📱 SMS</button>
       <button class="btn btn-ghost" style="background:var(--success);border:none;color:#fff;" onclick="copyEmail()">📋 Copy</button>
     </div></div>`;
