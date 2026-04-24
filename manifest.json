@@ -3,7 +3,7 @@
   "name": "InterviewPro — Professional Interview Platform",
   "short_name": "InterviewPro",
   "description": "InterviewPro is a professional interview application with ready-made questions for conducting structured job interviews. Covers hospitality, hotel, retail, warehouse, office, supermarket and more — with the ability to add your own custom industries and questions. Includes candidate tracking, Kanban pipeline, interview calendar, PDF reports and backup.",
-  "start_url": "./RecruiterPro.html",
+  "start_url": "./recruiterpro",
   "scope": "./",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone"],
@@ -46,7 +46,7 @@
       "name": "New Interview",
       "short_name": "New Interview",
       "description": "Start a new candidate interview immediately",
-      "url": "./RecruiterPro.html",
+      "url": "./recruiterpro",
       "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
     }
   ],
