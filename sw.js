@@ -1,5 +1,5 @@
-// InterviewPro Service Worker v4 — Full Offline Support
-const CACHE = 'interviewpro-v4';
+// InterviewPro Service Worker v5 — Full Offline Support
+const CACHE = 'interviewpro-v5';
 const ASSETS = [
   './RecruiterPro.html',
   './manifest.json',
@@ -29,8 +29,13 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
+  // Only cache same-origin requests
+  const url = new URL(e.request.url);
+  if (url.origin !== self.location.origin) {
+    return; // let non-origin requests pass through normally
+  }
   e.respondWith(
-    caches.match(e.request).then(cached => {
+    caches.match(e.request, { ignoreSearch: true }).then(cached => {
       if (cached) return cached;
       return fetch(e.request).then(res => {
         if (!res || res.status !== 200 || res.type !== 'basic') return res;
